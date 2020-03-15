@@ -8,20 +8,20 @@ class Artist
  
   def songs
    Song.all.select do |song|
-     song.artist == self #self is the instance of that artist we currently working on
+     song.artist == self
     end
    end
    
-   def add_song(song) #tell song it belongs to that artist
-      song.artist = self #song argument is an instance of Song
+   def add_song(song)
+      song.artist = self
   end
   
-  def add_song_by_name(song_name) #we want to use the add_song method
-    new_song = Song.new(song_name) #set the new song = to new_song
-    add_song(new_song) #and pass it in our add_song method,which adds a song to an artist's collection
+  def add_song_by_name(song_name) 
+    new_song = Song.new(song_name)
+    add_song(new_song)
   end 
   
-  def self.song_count #returns a total num of songs
+  def self.song_count
     Song.all.count
   end  
 end  

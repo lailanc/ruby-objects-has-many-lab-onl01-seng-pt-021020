@@ -15,16 +15,16 @@ attr_accessor :name
     end
    end
    
-   def add_song(song) artist
+   def add_song(song)
       song.artist = self  Song
   end
   
   def add_song_by_name(song_name) 
     new_song = Song.new(song_name) 
-    add_song(new_song) #and pass it in our add_song method,which adds a song to an artist's collection
+    add_song(new_song) 
   end 
   
-  def self.song_count #returns a total num of songs
+  def self.song_count
     Song.all.count
   end
   

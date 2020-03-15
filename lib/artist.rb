@@ -10,7 +10,7 @@ attr_accessor :name
   end
   
   def songs 
-    artist = []
-  end 
+
+  
       
 end 
